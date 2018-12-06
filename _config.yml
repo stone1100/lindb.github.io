@@ -1,2 +1,6 @@
 theme: jekyll-theme-cayman
+name: LinDB
 title: LinDB
+description: Time Series Database
+
+url: "https://lindb.github.io"
