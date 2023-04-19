@@ -1,0 +1,86 @@
+/*
+Licensed to LinDB under one or more contributor
+license agreements. See the NOTICE file distributed with
+this work for additional information regarding copyright
+ownership. LinDB licenses this file to you under
+the Apache License, Version 2.0 (the "License"); you may
+not use this file except in compliance with the License.
+You may obtain a copy of the License at
+    http://www.apache.org/licenses/LICENSE-2.0
+ 
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+*/
+@import "//at.alicdn.com/t/c/font_4042944_mipdl25ymjh.css";
+@import "layout";
+@import "products";
+
+html,
+body {
+  ::selection {
+    color: #fff;
+    background: var(--ifm-color-primary);
+  }
+}
+
+@font-face {
+  font-family: iconfont; /* Project id 1331329 */
+  src: url("/fonts/iconfont.woff2?t=1675176928757") format("woff2"),
+    url("/fonts/iconfont.woff?t=1675176928757") format("woff"),
+    url("/fonts/iconfont.ttf?t=1675176928757") format("truetype");
+}
+
+:root {
+  --ifm-color-primary: #f25734;
+  --ifm-color-primary-dark: #f14c26;
+  --ifm-color-primary-darker: #f14c26;
+  --ifm-color-primary-darkest: #f14c26;
+  --ifm-color-primary-light: #f6856b;
+  --ifm-color-primary-lighter: #f6856b;
+  --ifm-color-primary-lightest: #f79c87;
+  --ifm-background-color: #18181b;
+  --ifm-navbar-height: 3.75rem;
+  --ifm-code-font-size: 95%;
+  --ifm-global-border-radius: 4px;
+  --docusaurus-highlighted-code-line-bg: rgb(0 0 0 / 10%);
+  --transition-bezier: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  --transition-fastest: 100ms;
+  --font-size-small: 15px;
+  --font-size-normal: 16px;
+  --font-size-large: 17px;
+  --font-size-big-1: 22px;
+  --font-size-big-2: 24px;
+  --font-size-big-3: 32px;
+  --font-size-big-4: 46px;
+  --font-size-big-5: 64px;
+  --palette-pale-blue: #52556b;
+  --palette-rock: #262833;
+  --palette-gray: #32343e;
+  --palette-charade: #21222c;
+  --palette-white-darker: #d9d9d9;
+  --image-shadow: 5px rgb(20 23 37 / 94%);
+  --theme-screenshot-background-color: var(--palette-charade);
+}
+
+:root[data-theme="light"] {
+  --palette-rock: #f0f1f5;
+  --palette-gray: #4b4e5d;
+  --theme-screenshot-background-color: var(--ifm-footer-background-color);
+  --ifm-background-color: #fff;
+}
+
+:root[data-theme="dark"] {
+  --palette-pale-blue: #b1b5d3;
+  --palette-rock: rgb(var(--palette-rock-raw));
+  --palette-rock-raw: 38, 40, 51;
+  --theme-card-bg-color-hover: #2f313f;
+  --docusaurus-highlighted-code-line-bg: rgb(0 0 0 / 30%);
+  --ifm-background-color: var(--palette-charade);
+  --ifm-navbar-background-color: var(--palette-charade);
+  --ifm-navbar-shadow: 0 1px 0 0 var(--ifm-toc-border-color);
+  --ifm-dropdown-background-color: var(--palette-rock);
+}

@@ -1,15 +1,16 @@
 {
-  "compilerOptions": {
-	  "allowSyntheticDefaultImports": true,
-    "lib": ["DOM", "ES2020"],
-    "module": "ESNext",
-    "moduleResolution": "node",
-    "noEmitOnError": true,
-    "noImplicitAny": false,
-    "skipLibCheck": true,
-    "target": "ES2020",
-    "baseUrl": "./docs/.vuepress",
-	  "types": ["vite/client","vue"]
-  },
-  "include": ["./docs/.vuepress"]
+	// This file is not used in compilation. It is here just for a nice editor experience.
+	"extends": "@docusaurus/tsconfig/tsconfig.json",
+	"compilerOptions": {
+		"baseUrl": ".",
+		"resolveJsonModule": true,
+		"paths": {
+			"@theme/Chevron": [
+				"src/theme/Chevron"
+			],
+			"@site/*": [
+				"./*"
+			]
+		}
+	}
 }

@@ -1,0 +1,78 @@
+{
+  "sidebar.lindb.category.Get Started": {
+    "message": "快速开始",
+    "description": "The label for category Get Started in sidebar lindb"
+  },
+  "sidebar.lindb.category.Get Started.link.generated-index.title": {
+    "message": "快速开始",
+    "description": "The generated-index page title for category Get Started in sidebar lindb"
+  },
+  "sidebar.lindb.category.Get Started.link.generated-index.description": {
+    "message": "This section explains how to install and run LinDB using one of the following methods:",
+    "description": "The generated-index page description for category Get Started in sidebar lindb"
+  },
+  "sidebar.lindb.category.Develop": {
+    "message": "应用开发",
+    "description": "The label for category Develop in sidebar lindb"
+  },
+  "sidebar.lindb.category.Deployment": {
+    "message": "部署",
+    "description": "The label for category Deployment in sidebar lindb"
+  },
+  "sidebar.lindb.category.Reference": {
+    "message": "参考指南",
+    "description": "The label for category Reference in sidebar lindb"
+  },
+  "sidebar.lindb.category.Client libraries": {
+    "message": "客户端SDK",
+    "description": "The label for category Client libraries in sidebar lindb"
+  },
+  "sidebar.lindb.category.Admin UI": {
+    "message": "Admin UI",
+    "description": "The label for category Admin UI in sidebar lindb"
+  },
+  "sidebar.lindb.category.API": {
+    "message": "API",
+    "description": "The label for category API in sidebar lindb"
+  },
+  "sidebar.lindb.category.Design": {
+    "message": "设计",
+    "description": "The label for category Design in sidebar lindb"
+  },
+  "sidebar.lindb.category.Troubleshooting": {
+    "message": "故障诊断",
+    "description": "The label for category Troubleshooting in sidebar lindb"
+  },
+  "sidebar.docs.category.Open Source": {
+    "message": "Open Source",
+    "description": "The label for category Open Source in sidebar docs"
+  },
+  "sidebar.docs.link.LinDB": {
+    "message": "LinDB",
+    "description": "The label for link LinDB in sidebar docs, linking to /docs/lindb"
+  },
+  "sidebar.docs.link.Linsight": {
+    "message": "Linsight",
+    "description": "The label for link Linsight in sidebar docs, linking to /docs/linsight"
+  },
+  "sidebar.lindb.category.Deployment.link.generated-index.title": {
+    "message": "部署",
+    "description": "The generated-index page title for category Deployment in sidebar lindb"
+  },
+  "sidebar.lindb.category.Deployment.link.generated-index.description": {
+    "message": "This section explains how to deploy LinDB on servers or Kubernetes.",
+    "description": "The generated-index page description for category Deployment in sidebar lindb"
+  },
+  "sidebar.lindb.category.Releases": {
+    "message": "发布历史",
+    "description": "The label for category Releases in sidebar lindb"
+  },
+  "sidebar.lindb.link.v1.0": {
+    "message": "v1.0",
+    "description": "The label for link v1.0 in sidebar lindb, linking to https://github.com/lindb/lindb/blob/main/CHANGELOG/CHANGELOG-1.0.md"
+  },
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  }
+}

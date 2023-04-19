@@ -1,0 +1,123 @@
+/*
+Licensed to LinDB under one or more contributor
+license agreements. See the NOTICE file distributed with
+this work for additional information regarding copyright
+ownership. LinDB licenses this file to you under
+the Apache License, Version 2.0 (the "License"); you may
+not use this file except in compliance with the License.
+You may obtain a copy of the License at
+    http://www.apache.org/licenses/LICENSE-2.0
+ 
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+*/
+.release {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .item {
+    display: flex;
+    flex-direction: row;
+
+    .key {
+      width: 140px;
+    }
+
+    .versions {
+      display: inline-block;
+      position: relative;
+
+      select {
+        font-size: 16px;
+        padding: 6px 6px 6px 8px;
+        min-width: 160px;
+        border-color: var(--ifm-color-primary);
+        appearance: none;
+      }
+
+      &::after {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        height: 12px;
+        margin-top: -6px;
+        padding: 0;
+        background-color: transparent;
+        color: var(--ifm-color-primary);
+        font-family: sans-serif;
+        line-height: 12px;
+        text-align: center;
+        content: "▾";
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+.os-list {
+  display: flex;
+  flex-direction: rows;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  .os {
+    min-width: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: var(--theme-card-border-radius);
+    border: 1px solid var(--palette-rock);
+    background: var(--palette-rock);
+    /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
+    font-family: iconfont;
+    content: "";
+
+    i {
+      height: 3rem;
+      font-size: 2.5rem;
+    }
+
+    .os-name {
+      margin-top: 4px;
+      font-size: 14px;
+    }
+
+    &:hover {
+      background: var(--theme-card-bg-color-hover);
+      cursor: pointer;
+      box-shadow: 0 0 10px var(--ifm-color-primary);
+    }
+
+    &.active {
+      border: 2px solid var(--ifm-color-primary);
+      color: var(--ifm-color-primary);
+      font-weight: 600;
+    }
+  }
+}
+
+.downloads {
+  width: 100%;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, 1fr);
+
+  .title {
+    display: flex;
+    align-items: center;
+  }
+
+  .buttons {
+    margin-top: 24px;
+  }
+
+  @media only screen and (max-width: ( 62rem)) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

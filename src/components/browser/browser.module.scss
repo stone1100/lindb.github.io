@@ -1,0 +1,87 @@
+/*
+Licensed to LinDB under one or more contributor
+license agreements. See the NOTICE file distributed with
+this work for additional information regarding copyright
+ownership. LinDB licenses this file to you under
+the Apache License, Version 2.0 (the "License"); you may
+not use this file except in compliance with the License.
+You may obtain a copy of the License at
+    http://www.apache.org/licenses/LICENSE-2.0
+ 
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+*/
+
+.browser-window {
+  border: 3px solid var(--ifm-color-emphasis-200);
+  border-radius: var(--ifm-global-radius);
+  box-shadow: var(--ifm-global-shadow-lw);
+  margin-bottom: var(--ifm-leading);
+  display: flex;
+  flex-direction: column;
+
+  .header {
+    align-items: center;
+    background: var(--ifm-color-emphasis-200);
+    display: flex;
+    padding: 0.5rem 1rem;
+
+    .buttons {
+      white-space: nowrap;
+    }
+
+    .menu-icon {
+      margin-left: auto;
+    }
+
+    .adderss-bar {
+      flex: 1 0;
+      margin: 0 1rem 0 0.5rem;
+      border-radius: 12.5px;
+      background-color: var(--ifm-background-color);
+      color: var(--ifm-toc-link-color);
+      padding: 5px 15px;
+      font: 400 13px Arial, sans-serif;
+      user-select: none;
+    }
+
+    .text-truncate {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .dot {
+      margin-right: 6px;
+      margin-top: 4px;
+      height: 12px;
+      width: 12px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .bar {
+      width: 17px;
+      height: 3px;
+      background-color: #aaa;
+      margin: 3px 0;
+      display: block;
+    }
+  }
+
+  .body {
+    flex: 1;
+    background-color: var(--ifm-background-color);
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+  }
+
+  .body > *:last-child {
+    margin-bottom: 0;
+  }
+}

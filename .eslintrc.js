@@ -1,51 +1,53 @@
+/*
+Licensed to LinDB under one or more contributor
+license agreements. See the NOTICE file distributed with
+this work for additional information regarding copyright
+ownership. LinDB licenses this file to you under
+the Apache License, Version 2.0 (the "License"); you may
+not use this file except in compliance with the License.
+You may obtain a copy of the License at
+    http://www.apache.org/licenses/LICENSE-2.0
+ 
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+*/
 module.exports = {
-    root: true,
-    extends: 'vuepress',
-    globals: {
-      __VUEPRESS_VERSION__: 'readonly',
-      __VUEPRESS_DEV__: 'readonly',
-      __VUEPRESS_SSR__: 'readonly',
-      __VUE_HMR_RUNTIME__: 'readonly',
-      __VUE_OPTIONS_API__: 'readonly',
-      __VUE_PROD_DEVTOOLS__: 'readonly',
+  env: {
+    browser: true,
+    es2021: true,
+  },
+  extends: [
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended",
+    "plugin:@docusaurus/recommended",
+  ],
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
     },
-    overrides: [
-      {
-        files: ['*.ts', '*.vue'],
-        extends: 'vuepress-typescript',
-        parserOptions: {
-          project: ['tsconfig.json'],
-        },
-        rules: {
-          '@typescript-eslint/ban-ts-comment': 'off',
-          '@typescript-eslint/no-explicit-any': 'off',
-          '@typescript-eslint/no-non-null-assertion': 'off',
-          '@typescript-eslint/no-var-requires': 'off',
-          'vue/component-tags-order': [
-            'error',
-            {
-              order: ['script', 'template', 'style'],
-            },
-          ],
-          'vue/multi-word-component-names': 'off',
-        },
-      },
-      {
-        files: ['*.vue'],
-        globals: {
-          defineEmits: 'readonly',
-          defineProps: 'readonly',
-        },
-        rules: {
-          // disable for setup script
-          '@typescript-eslint/no-unused-vars': 'off',
-        },
-      },
-      {
-        files: ['clientAppEnhance.ts'],
-        rules: {
-          'vue/match-component-file-name': 'off',
-        },
-      },
-    ],
-  }
+    ecmaVersion: 12,
+    sourceType: "module",
+  },
+  plugins: ["react", "@typescript-eslint", "react-hooks", "prettier", "header"],
+  rules: {
+    "no-unused-vars": "off",
+    "no-unused-expressions": "off",
+    "@typescript-eslint/no-unused-expressions": ["error"],
+    "prettier/prettier": "error",
+    "import/prefer-default-export": "off",
+    "no-empty-interface": "off",
+    "prefer-destructuring": "off",
+    "prefer-template": "error",
+    "@typescript-eslint/no-namespace": "off",
+    "@typescript-eslint/explicit-member-accessibility": "off",
+    "@typescript-eslint/consistent-type-assertions": "off",
+    "@typescript-eslint/no-use-before-define": "error",
+    "header/header": [2, "header.js"],
+  },
+};

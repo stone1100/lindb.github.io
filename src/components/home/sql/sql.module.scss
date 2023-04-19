@@ -1,0 +1,254 @@
+/*
+Licensed to LinDB under one or more contributor
+license agreements. See the NOTICE file distributed with
+this work for additional information regarding copyright
+ownership. LinDB licenses this file to you under
+the Apache License, Version 2.0 (the "License"); you may
+not use this file except in compliance with the License.
+You may obtain a copy of the License at
+    http://www.apache.org/licenses/LICENSE-2.0
+ 
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+*/
+
+.showcase {
+  display: flex;
+  width: 100%;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 4px;
+  font-size: var(--font-size-large);
+  background: var(--palette-rock);
+
+  .inner {
+    display: flex;
+    width: 100%;
+
+    .chevron {
+      display: none;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem;
+
+      svg {
+        fill: var(--palette-white-darker);
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .left {
+    position: relative;
+    max-height: 355px;
+    overflow: hidden;
+    flex: 1 1 515px;
+
+    .offset {
+      position: relative;
+      transform: translateZ(0);
+      transition: top var(--transition-fastest) var(--transition-bezier);
+
+      > div {
+        opacity: 0.3;
+      }
+
+      > div:nth-child(even) {
+        display: none;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: " ";
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 108px;
+      background: linear-gradient(
+        var(--palette-rock),
+        rgb(var(--palette-rock-raw) 0)
+      );
+      z-index: 1;
+    }
+
+    &::after {
+      position: absolute;
+      content: " ";
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 108px;
+      background: linear-gradient(
+        rgb(var(--palette-rock-raw) 0),
+        var(--palette-rock)
+      );
+    }
+  }
+
+  .right {
+    display: flex;
+    padding-left: 0.5rem;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+
+    .title {
+      display: flex;
+      margin: 0;
+      align-items: center;
+      font-size: var(--font-size-large);
+      font-weight: var(--ifm-font-weight-normal);
+
+      i {
+        font-size: 18px;
+        margin-right: 8px;
+      }
+    }
+
+    .description {
+      height: 0;
+      margin: 0;
+      font-size: var(--font-size-normal);
+      opacity: 0;
+      transition: opacity,
+        height var(--transition-fastest) var(--transition-bezier);
+    }
+
+    .button {
+      max-width: 468px;
+      padding: 1rem;
+      background: var(--palette-gray);
+      border-radius: var(--ifm-global-border-radius);
+      user-select: none;
+      transition: background var(--transition-fastest) var(--transition-bezier);
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 0.75rem;
+      }
+
+      &.active {
+        background: var(--ifm-color-primary);
+
+        .description {
+          height: auto;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.showcase__chevron--bottom {
+  transform: rotate(180deg);
+}
+
+@media (width <= 1113px) {
+  .showcase {
+    --active-font-size: calc(var(--font-size-big-2) - 2px);
+
+    padding: 4rem 1.75em;
+
+    .inner {
+      justify-content: center;
+      align-items: center;
+    }
+
+    .left {
+      flex-grow: 0;
+      flex-shrink: 1;
+    }
+
+    .right {
+      .description {
+        display: none;
+      }
+
+      .button {
+        padding: 0.75rem;
+      }
+    }
+  }
+}
+
+@media (width <= 800px) {
+  .showcase {
+    --active-font-size: var(--font-size-large);
+
+    padding: 3rem 1rem;
+    font-size: var(--font-size-normal);
+
+    .left {
+      max-height: 288px;
+      flex: 0 0 385px;
+    }
+  }
+}
+
+@media (width >= 622px) {
+  .showcase {
+    .code1 > div:nth-child(1),
+    .code2 > div:nth-child(3),
+    .code3 > div:nth-child(5),
+    .code4 > div:nth-child(7) {
+      font-size: var(--active-font-size);
+      opacity: 1;
+    }
+  }
+}
+
+@media (width <= 622px) {
+  .showcase {
+    --active-font-size: var(--font-size-normal);
+
+    padding: 0;
+    font-size: var(--font-size-normal);
+
+    .inner {
+      flex-direction: column;
+
+      .chevron {
+        display: flex;
+      }
+
+      .left {
+        .offset > div {
+          pointer-events: none;
+          user-select: none;
+        }
+
+        .offset > div:nth-child(even) {
+          display: flex;
+        }
+
+        .offset > div:nth-child(odd) {
+          display: none;
+        }
+
+        .code1 > div:nth-child(2),
+        .code2 > div:nth-child(4),
+        .code3 > div:nth-child(6),
+        .code4 > div:nth-child(8) {
+          font-size: var(--active-font-size);
+          opacity: 1;
+        }
+      }
+
+      .right {
+        display: none;
+      }
+    }
+  }
+}
